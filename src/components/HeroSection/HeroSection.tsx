@@ -2,7 +2,7 @@ import HeroImage from "../../assets/banner-stack.png";
 
 const HeroSection = () => {
   return (
-    <div className="container mx-auto px-8 py-10 flex flex-col md:flex-row justify-between items-center gap-10">
+    <div className="container mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-10">
       <div className="flex-1">
         <div className="pb-10">
           <h1 className="flex flex-col pb-6 text-5xl md:text-6xl font-extrabold leading-tight">
