@@ -1,13 +1,17 @@
 import TechnologyList from "./TechnologyList";
 import type { ITechnologyType } from "../../dataType/technologyDataType";
-import { Suspense } from "react";
+import { Suspense, useState } from "react";
+import YourStack from "../YourStack/YourStacks";
 const fetchTechnologyData = async (): Promise<ITechnologyType[]> => {
   const response = await fetch("/data.json");
   const technologiesData = await response.json();
   return technologiesData;
 };
 const Technology = () => {
-  const technologyDataPromise = fetchTechnologyData();
+  const [yourStackTechnology, setYourStackTechnology] = useState<
+    ITechnologyType[]
+  >([]);
+  const [technologyDataPromise] = useState(() => fetchTechnologyData());
   return (
     <div className="container mx-auto p-8">
       <div className="flex flex-col mb-10 gap-2">
@@ -20,18 +24,19 @@ const Technology = () => {
         {/* Left Div */}
         <div className="flex-1">
           <Suspense fallback={"Loading....."}>
-            <TechnologyList technologyPromise={technologyDataPromise} />
+            <TechnologyList
+              technologyPromise={technologyDataPromise}
+              yourStackTechnology={yourStackTechnology}
+              setYourStackTechnology={setYourStackTechnology}
+            />
           </Suspense>
         </div>
         {/* Right Div */}
         <div className="card w-96 bg-base-100 card-md shadow-sm">
-          <div className="card-body p-5">
-            <h2 className="card-title">Your Stack</h2>
-            <p>No technologies selected yet.</p>
-            <div className="flex justify-center  items-center border border-dashed p-6">
-              <h1>Your stack is empty.</h1>
-            </div>
-          </div>
+          <YourStack
+            yourStackTechnology={yourStackTechnology}
+            setYourStackTechnology={setYourStackTechnology}
+          />
         </div>
       </div>
     </div>
