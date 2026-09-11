@@ -46,7 +46,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="flex flex-col justify-between gap-3 border-t pt-6 text-sm text-gray-500 md:flex-row">
+      <div className="flex flex-col justify-between gap-3 border border-gray-200 p-6 text-sm text-gray-500 md:flex-row">
         <p>© 2026 Dev Stack. All rights reserved.</p>
 
         <div className="flex gap-3">
