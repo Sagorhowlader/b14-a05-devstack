@@ -2,7 +2,7 @@ import HeroImage from "../../assets/banner-stack.png";
 
 const HeroSection = () => {
   return (
-    <div className="container mx-auto flex flex-col items-center px-5 text-center md:flex-row md:justify-between md:gap-10 md:px-8 md:text-start">
+    <div className="container mx-auto flex flex-col items-center px-5 text-center lg:flex-row lg:justify-between lg:gap-10 lg:px-8 lg:text-start">
       {/* Hero Content */}
       <div className="flex-1">
         <div className="pb-5">
@@ -19,7 +19,7 @@ const HeroSection = () => {
         </div>
 
         {/* Buttons */}
-        <div className="flex items-center justify-center gap-4 md:justify-start">
+        <div className="flex items-center justify-center gap-4 lg:justify-start">
           <button className="btn w-40 border-0 bg-brand-gradient text-[10px] text-white md:w-48 md:text-[14px] md:btn-lg">
             Explore Technologies
           </button>

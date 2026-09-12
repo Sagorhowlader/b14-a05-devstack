@@ -4,7 +4,7 @@ import Logo from "../../assets/logo-text.png";
 const Navbar = () => {
   return (
     <header className="sticky top-0 z-50 border-b border-gray-200 bg-white">
-      <nav className="container mx-auto flex min-h-20 items-center justify-between gap-2 px-5 md:px-8">
+      <nav className="container mx-auto flex min-h-20 items-center justify-between gap-2 px-5 md:gap-2 lg:px-8">
         {/* Mobile menu button */}
         <button
           type="button"
@@ -20,7 +20,7 @@ const Navbar = () => {
 
         {/* Desktop navigation */}
         <div>
-          <ul className="hidden items-center justify-center gap-8 text-sm font-semibold md:flex">
+          <ul className="hidden items-center justify-center gap-4 text-sm font-semibold md:flex lg:flex lg:gap-8">
             <li className="text-brand-gradient">Home</li>
             <li className="text-[#475569]">Technologies</li>
             <li className="text-[#475569]">Projects</li>
@@ -30,7 +30,7 @@ const Navbar = () => {
         </div>
 
         {/* Authentication buttons */}
-        <div className="flex items-center p-1 md:gap-4">
+        <div className="flex items-center p-1 md:gap-1 lg:gap-4">
           <button className="btn btn-ghost text-sm font-semibold">
             Sign In
           </button>

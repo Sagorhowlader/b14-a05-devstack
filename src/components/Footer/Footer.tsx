@@ -11,7 +11,7 @@ const Footer = () => {
             <div className="flex flex-col items-center space-y-4 md:items-start">
               <img src={Logo} alt="Dev Stack logo" />
 
-              <p className="max-w-115.5 text-gray-600">
+              <p className="max-w-80 text-gray-600 lg:max-w-115">
                 Curated tools, technologies, and resources for developers
                 building modern software.
               </p>
@@ -48,7 +48,7 @@ const Footer = () => {
           </div>
 
           {/* Navigation - Hidden on Mobile */}
-          <div className="hidden flex-1 justify-around gap-8 md:flex">
+          <div className="hidden flex-1 justify-around gap-8 md:flex lg:flex">
             <ul className="space-y-3">
               <li className="font-semibold text-gray-900">Product</li>
               <li>
@@ -103,7 +103,6 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Bottom Section */}
         {/* Bottom Section */}
         <div className="flex w-full justify-between border-t border-gray-200 px-4 pt-4 text-center text-sm text-gray-500">
           <p>© 2026 Dev Stack. All rights reserved.</p>

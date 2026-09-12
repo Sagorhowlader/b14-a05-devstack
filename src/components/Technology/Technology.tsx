@@ -69,7 +69,7 @@ const Technology = () => {
 
   return (
     <div className="container mx-auto p-4 sm:p-6 md:p-8">
-      <div className="flex flex-col justify-between text-center items-center mb-10 gap-2 md:items-start">
+      <div className="flex flex-col justify-between text-center items-center mb-10 gap-2 lg:items-start">
         <h1 className="text-2xl sm:text-4xl font-extrabold">
           Explore the
           <span className="text-brand-gradient">Technologies</span>
@@ -79,7 +79,7 @@ const Technology = () => {
         </p>
       </div>
 
-      <div className="flex flex-col gap-3 items-stretch md:flex-row md:items-start">
+      <div className="flex flex-col gap-3 items-stretch lg:flex-row lg:items-start">
         {/* Left Div */}
         <div className="flex-1">
           <Suspense fallback={<Skeleton />}>
@@ -92,7 +92,7 @@ const Technology = () => {
         </div>
 
         {/* Right Div */}
-        <div className="card w-full md:w-96 bg-base-100 card-md shadow-sm">
+        <div className="card w-full lg:w-96 bg-base-100 card-md shadow-sm">
           <YourStack
             yourStackTechnology={yourStackTechnology}
             handleRemoveFromStack={handleRemoveFromStack}
