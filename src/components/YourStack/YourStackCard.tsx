@@ -11,9 +11,9 @@ const YourStackCard = ({
   handleRemoveFromStack,
 }: YourStackCardProps) => {
   return (
-    <div className="card bg-base-100 card-xs shadow-sm mb-2.5 p-3.5">
-      <div className="card-body flex flex-row justify-between items-center">
-        <div className="flex flex-row justify-between items-center gap-2.5">
+    <div className="card card-xs mb-2.5 bg-base-100 p-3.5 shadow-sm">
+      <div className="card-body flex flex-row items-center justify-between">
+        <div className="flex items-center gap-2.5">
           <img
             src={stack.icon}
             alt={`${stack.name} icon`}
@@ -26,10 +26,13 @@ const YourStackCard = ({
           </div>
         </div>
 
-        <IoMdClose
-          className="w-5 h-5"
+        <button
+          type="button"
           onClick={() => handleRemoveFromStack(stack)}
-        />
+          aria-label={`Remove ${stack.name}`}
+        >
+          <IoMdClose className="h-5 w-5" />
+        </button>
       </div>
     </div>
   );

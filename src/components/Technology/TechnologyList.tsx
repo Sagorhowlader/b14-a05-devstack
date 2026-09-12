@@ -1,6 +1,7 @@
 import { use } from "react";
 import type { ITechnologyType } from "../../dataType/technologyDataType";
 import TechnologyCard from "./TechnologyCard";
+
 type TechnologyListProps = {
   technologyPromise: Promise<ITechnologyType[]>;
   yourStackTechnology: ITechnologyType[];
@@ -15,7 +16,7 @@ const TechnologyList = ({
   const technologyData = use(technologyPromise);
 
   return (
-    <div className="grid gap-4 md:grid-cols-3 ">
+    <div className="grid gap-4 md:grid-cols-3">
       {technologyData.map((technology) => (
         <TechnologyCard
           key={technology.id}

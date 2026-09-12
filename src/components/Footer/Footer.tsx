@@ -104,10 +104,11 @@ const Footer = () => {
         </div>
 
         {/* Bottom Section */}
-        <div className="flex w-full justify-between gap-3 border-t border-gray-200 pt-8 pr-8 text-center text-sm text-gray-500 md:flex-row md:text-left">
+        {/* Bottom Section */}
+        <div className="flex w-full justify-between border-t border-gray-200 px-4 pt-4 text-center text-sm text-gray-500">
           <p>© 2026 Dev Stack. All rights reserved.</p>
 
-          <div className="flex flex-row justify-center gap-4 md:justify-start ">
+          <div className="flex gap-4">
             <a href="#" className="hover:text-black">
               Privacy
             </a>

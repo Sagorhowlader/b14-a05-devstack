@@ -13,16 +13,17 @@ const YourStack = ({
   handleRemoveAll,
 }: YourStackProps) => {
   return (
-    <div className="card bg-base-100 card-md shadow-sm">
+    <div className="card card-md bg-base-100 shadow-sm">
       <div className="card-body">
         <h2 className="text-base font-bold">Your Stack</h2>
+
         {yourStackTechnology.length === 0 ? (
           <div className="flex flex-col gap-2.5">
             <p className="text-xs text-[#94A3B8]">
               No technologies selected yet.
             </p>
 
-            <div className="flex justify-center items-center border border-dashed border-[#94A3B8]/40  p-6">
+            <div className="flex items-center justify-center border border-dashed border-[#94A3B8]/40 p-6">
               <h1 className="text-xs text-[#94A3B8]">Your stack is empty.</h1>
             </div>
           </div>
@@ -31,6 +32,7 @@ const YourStack = ({
             <p className="text-xs text-[#94A3B8]">
               {yourStackTechnology.length} Technology Selected
             </p>
+
             {yourStackTechnology.map((stack) => (
               <YourStackCard
                 key={stack.id}
@@ -41,7 +43,7 @@ const YourStack = ({
 
             <button
               className="btn btn-outline btn-error w-full"
-              onClick={() => handleRemoveAll()}
+              onClick={handleRemoveAll}
             >
               Remove All
             </button>

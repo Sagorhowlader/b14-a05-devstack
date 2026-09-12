@@ -69,12 +69,14 @@ const Technology = () => {
 
   return (
     <div className="container mx-auto p-4 sm:p-6 md:p-8">
-      <div className="flex flex-col justify-between items-center mb-10 gap-2 md:items-start">
+      <div className="flex flex-col justify-between text-center items-center mb-10 gap-2 md:items-start">
         <h1 className="text-2xl sm:text-4xl font-extrabold">
           Explore the
           <span className="text-brand-gradient">Technologies</span>
         </h1>
-        <p>Pick one technology per category to build your ideal stack.</p>
+        <p className="text-xs md:text-xl">
+          Pick one technology per category to build your ideal stack.
+        </p>
       </div>
 
       <div className="flex flex-col gap-3 items-stretch md:flex-row md:items-start">
