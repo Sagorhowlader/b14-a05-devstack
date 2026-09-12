@@ -2,7 +2,6 @@ import type { Dispatch, SetStateAction } from "react";
 import type { ITechnologyType } from "../../dataType/technologyDataType";
 import YourStackCard from "./YourStackCard";
 import { Bounce, toast } from "react-toastify";
-import Technology from "../Technology/Technology";
 
 type YourStackProps = {
   yourStackTechnology: ITechnologyType[];

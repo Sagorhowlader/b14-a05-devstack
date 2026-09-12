@@ -1,4 +1,4 @@
-import React, { type Dispatch, type SetStateAction } from "react";
+import { type Dispatch, type SetStateAction } from "react";
 import type { ITechnologyType } from "../../dataType/technologyDataType";
 import { Bounce, toast } from "react-toastify";
 type TechnologyCardProps = {

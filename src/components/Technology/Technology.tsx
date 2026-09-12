@@ -2,6 +2,7 @@ import TechnologyList from "./TechnologyList";
 import type { ITechnologyType } from "../../dataType/technologyDataType";
 import { Suspense, useState } from "react";
 import YourStack from "../YourStack/YourStacks";
+import Skeleton from "../Skeleton/Skeleton";
 
 const fetchTechnologyData = async (): Promise<ITechnologyType[]> => {
   const response = await fetch("/data.json");
@@ -30,7 +31,7 @@ const Technology = () => {
       <div className="flex flex-col gap-3 items-stretch md:flex-row md:items-start">
         {/* Left Div */}
         <div className="flex-1">
-          <Suspense fallback={"Loading....."}>
+          <Suspense fallback={<Skeleton />}>
             <TechnologyList
               technologyPromise={technologyDataPromise}
               yourStackTechnology={yourStackTechnology}
