@@ -3,7 +3,7 @@ import Logo from "../../assets/logo-text.png";
 const Navbar = () => {
   return (
     <header className="sticky top-0 z-50 bg-white border-b border-gray-200">
-      <nav className="container mx-auto flex min-h-[80px] items-center justify-between px-5 gap-2 md:px-8">
+      <nav className="container mx-auto flex min-h-20 items-center justify-between px-5 gap-2 md:px-8">
         <div className="md:hidden gap-1.5">
           <IoMdMenu />
         </div>
@@ -12,7 +12,7 @@ const Navbar = () => {
         </div>
         <div>
           <ul className="hidden md:flex gap-8 justify-center items-center text-sm font-semibold">
-            <li className="bg-gradient-to-r from-orange-500 via-pink-500 to-violet-600 bg-clip-text text-transparent">
+            <li className="bg-linear-to-r from-orange-500 via-pink-500 to-violet-600 bg-clip-text text-transparent">
               Home
             </li>
             <li className="text-[#475569]">Technologies</li>

@@ -3,10 +3,13 @@ import type { ITechnologyType } from "../../dataType/technologyDataType";
 
 type YourStackCardProps = {
   stack: ITechnologyType;
-  handleDelectStack: (technology: ITechnologyType) => void;
+  handleRemoveFromStack: (technology: ITechnologyType) => void;
 };
 
-const YourStackCard = ({ stack, handleDelectStack }: YourStackCardProps) => {
+const YourStackCard = ({
+  stack,
+  handleRemoveFromStack,
+}: YourStackCardProps) => {
   return (
     <div className="card bg-base-100 card-xs shadow-sm mb-2.5 p-3.5">
       <div className="card-body flex flex-row justify-between items-center">
@@ -25,7 +28,7 @@ const YourStackCard = ({ stack, handleDelectStack }: YourStackCardProps) => {
 
         <IoMdClose
           className="w-5 h-5"
-          onClick={() => handleDelectStack(stack)}
+          onClick={() => handleRemoveFromStack(stack)}
         />
       </div>
     </div>

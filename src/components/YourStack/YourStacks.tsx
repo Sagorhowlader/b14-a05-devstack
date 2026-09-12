@@ -1,38 +1,17 @@
-import type { Dispatch, SetStateAction } from "react";
 import type { ITechnologyType } from "../../dataType/technologyDataType";
 import YourStackCard from "./YourStackCard";
-import { Bounce, toast } from "react-toastify";
 
 type YourStackProps = {
   yourStackTechnology: ITechnologyType[];
-  setYourStackTechnology: Dispatch<SetStateAction<ITechnologyType[]>>;
+  handleRemoveFromStack: (technology: ITechnologyType) => void;
+  handleRemoveAll: () => void;
 };
 
 const YourStack = ({
   yourStackTechnology,
-  setYourStackTechnology,
+  handleRemoveFromStack,
+  handleRemoveAll,
 }: YourStackProps) => {
-  const handleDelectStack = (technology: ITechnologyType) => {
-    const restStackTechnology = yourStackTechnology.filter(
-      (stack) => stack.id != technology.id,
-    );
-
-    setYourStackTechnology([...restStackTechnology]);
-    toast.error(`${technology.name} is Delete form you Stack`, {
-      position: "bottom-right",
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: false,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "light",
-      transition: Bounce,
-    });
-  };
-  const handleRemoveAllButton = () => {
-    setYourStackTechnology([]);
-  };
   return (
     <div className="card bg-base-100 card-md shadow-sm">
       <div className="card-body">
@@ -56,13 +35,13 @@ const YourStack = ({
               <YourStackCard
                 key={stack.id}
                 stack={stack}
-                handleDelectStack={handleDelectStack}
+                handleRemoveFromStack={handleRemoveFromStack}
               />
             ))}
 
             <button
               className="btn btn-outline btn-error w-full"
-              onClick={() => handleRemoveAllButton()}
+              onClick={() => handleRemoveAll()}
             >
               Remove All
             </button>

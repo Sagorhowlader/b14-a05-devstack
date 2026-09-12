@@ -1,16 +1,16 @@
-import { use, type Dispatch, type SetStateAction } from "react";
+import { use } from "react";
 import type { ITechnologyType } from "../../dataType/technologyDataType";
 import TechnologyCard from "./TechnologyCard";
 type TechnologyListProps = {
   technologyPromise: Promise<ITechnologyType[]>;
   yourStackTechnology: ITechnologyType[];
-  setYourStackTechnology: Dispatch<SetStateAction<ITechnologyType[]>>;
+  handleAddToStack: (technology: ITechnologyType) => void;
 };
 
 const TechnologyList = ({
   technologyPromise,
   yourStackTechnology,
-  setYourStackTechnology,
+  handleAddToStack,
 }: TechnologyListProps) => {
   const technologyData = use(technologyPromise);
 
@@ -20,8 +20,10 @@ const TechnologyList = ({
         <TechnologyCard
           key={technology.id}
           technology={technology}
-          yourStackTechnology={yourStackTechnology}
-          setYourStackTechnology={setYourStackTechnology}
+          handleAddToStack={handleAddToStack}
+          isAlreadyInStack={yourStackTechnology.some(
+            (stack) => stack.id === technology.id,
+          )}
         />
       ))}
     </div>

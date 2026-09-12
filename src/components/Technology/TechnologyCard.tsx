@@ -1,32 +1,14 @@
-import { type Dispatch, type SetStateAction } from "react";
 import type { ITechnologyType } from "../../dataType/technologyDataType";
-import { Bounce, toast } from "react-toastify";
 type TechnologyCardProps = {
   technology: ITechnologyType;
-  yourStackTechnology: ITechnologyType[];
-  setYourStackTechnology: Dispatch<SetStateAction<ITechnologyType[]>>;
+  handleAddToStack: (technology: ITechnologyType) => void;
+  isAlreadyInStack: boolean;
 };
 const TechnologyCard = ({
   technology,
-  yourStackTechnology,
-  setYourStackTechnology,
+  isAlreadyInStack,
+  handleAddToStack,
 }: TechnologyCardProps) => {
-  const isAlreadyInStack =
-    yourStackTechnology.filter((item) => item.id === technology.id).length > 0;
-  const handleAddtoStack = (technology: ITechnologyType) => {
-    setYourStackTechnology([...yourStackTechnology, technology]);
-    toast.success(`${technology.name} Add in Your Stack Bucket`, {
-      position: "bottom-right",
-      autoClose: 2000,
-      hideProgressBar: false,
-      closeOnClick: false,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "light",
-      transition: Bounce,
-    });
-  };
   return (
     <div
       className={`card border ${isAlreadyInStack ? "border-secondary" : "border-base-300"}`}
@@ -62,7 +44,7 @@ const TechnologyCard = ({
             className="btn btn-neutral w-full  disabled:border-[#F4309E] disabled:text-[#F4309E]"
             disabled={isAlreadyInStack}
             onClick={() => {
-              handleAddtoStack(technology);
+              handleAddToStack(technology);
             }}
           >
             {isAlreadyInStack ? "✓ Added to Stack" : "Add to Stack"}
