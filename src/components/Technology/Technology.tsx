@@ -72,9 +72,7 @@ const Technology = () => {
       <div className="flex flex-col justify-between items-center mb-10 gap-2 md:items-start">
         <h1 className="text-2xl sm:text-4xl font-extrabold">
           Explore the
-          <span className="bg-linear-to-r from-orange-500 via-pink-500 to-violet-600 bg-clip-text text-transparent">
-            Technologies
-          </span>
+          <span className="text-brand-gradient">Technologies</span>
         </h1>
         <p>Pick one technology per category to build your ideal stack.</p>
       </div>
