@@ -12,7 +12,9 @@ const Navbar = () => {
         </div>
         <div>
           <ul className="hidden md:flex gap-8 justify-center items-center text-sm font-semibold">
-            <li className="text-[#D91B7E]">Home</li>
+            <li className="bg-gradient-to-r from-orange-500 via-pink-500 to-violet-600 bg-clip-text text-transparent">
+              Home
+            </li>
             <li className="text-[#475569]">Technologies</li>
             <li className="text-[#475569]">Projects</li>
             <li className="text-[#475569]">About</li>

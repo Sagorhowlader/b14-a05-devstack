@@ -15,7 +15,7 @@ const TechnologyList = ({
   const technologyData = use(technologyPromise);
 
   return (
-    <div className="grid grid-cols-3 gap-4">
+    <div className="grid gap-4 md:grid-cols-3 ">
       {technologyData.map((technology) => (
         <TechnologyCard
           key={technology.id}
