@@ -17,9 +17,9 @@ const Technology = () => {
 
   return (
     <div className="container mx-auto p-4 sm:p-6 md:p-8">
-      <div className="flex flex-col mb-10 gap-2">
-        <h1 className="text-3xl sm:text-4xl font-extrabold">
-          Explore the{" "}
+      <div className="flex flex-col justify-between items-center mb-10 gap-2 md:items-start">
+        <h1 className="text-2xl sm:text-4xl font-extrabold">
+          Explore the
           <span className="bg-gradient-to-r from-orange-500 via-pink-500 to-violet-600 bg-clip-text text-transparent">
             Technologies
           </span>

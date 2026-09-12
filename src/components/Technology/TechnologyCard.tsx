@@ -28,7 +28,9 @@ const TechnologyCard = ({
     });
   };
   return (
-    <div className="card border border-base-300">
+    <div
+      className={`card border ${isAlreadyInStack ? "border-secondary" : "border-base-300"}`}
+    >
       <div className="card-body">
         <div className="flex justify-between items-start">
           <img
@@ -36,7 +38,9 @@ const TechnologyCard = ({
             alt={technology.name}
             className="w-14 h-14 object-contain"
           />
-          <span className="badge badge-primary">{technology.badge}</span>
+          <span className="badge badge-soft badge-secondary font-bold">
+            {technology.badge}
+          </span>
         </div>
 
         {/* Content */}
@@ -55,13 +59,13 @@ const TechnologyCard = ({
         {/* Button */}
         <div className="card-actions mt-6">
           <button
-            className="btn btn-primary w-full"
+            className="btn btn-neutral w-full  disabled:border-[#F4309E] disabled:text-[#F4309E]"
             disabled={isAlreadyInStack}
             onClick={() => {
               handleAddtoStack(technology);
             }}
           >
-            Add to Stack
+            {isAlreadyInStack ? "✓ Added to Stack" : "Add to Stack"}
           </button>
         </div>
       </div>

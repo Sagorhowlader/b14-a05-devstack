@@ -14,11 +14,11 @@ const YourStackCard = ({ stack, handleDelectStack }: YourStackCardProps) => {
           <img
             src={stack.icon}
             alt={`${stack.name} icon`}
-            className="h-14 w-14 object-contain"
+            className="h-8 w-8 object-contain"
           />
 
           <div className="flex flex-col gap-0.5">
-            <h2 className="text-2xl">{stack.name}</h2>
+            <h2 className="text-xs font-bold">{stack.name}</h2>
             <p>{stack.category}</p>
           </div>
         </div>
