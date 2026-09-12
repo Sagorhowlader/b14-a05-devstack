@@ -23,8 +23,7 @@ Dev Stack Builder is a simple website where users can explore different technolo
 
 ## Developer
 
-[Sagor Howlader][(https://www.linkedin.com/in/sagorhowlader17/)]
-
+[Sagor Howlader](https://www.linkedin.com/in/sagorhowlader17/)
 
 ## React Questions
 
@@ -55,9 +54,9 @@ Conditional rendering means showing different content depending on a condition.
 I used it to show an empty message when the stack has no technologies:
 
 ```tsx
-{yourStackTechnology.length === 0 && (
-  <p>Your stack is empty.</p>
-)}
+{
+  yourStackTechnology.length === 0 && <p>Your stack is empty.</p>;
+}
 ```
 
 ### 7. How do you pass data from a parent component to a child component, and how does a child send something back to the parent?
@@ -65,4 +64,3 @@ I used it to show an empty message when the stack has no technologies:
 A parent component passes data to a child component using **props**. For example, I pass `yourTechnologyStack` to the `YourStack` component.
 
 The parent can also pass a function as a prop. In my project, I pass `handleAddToStack` to the `TechnologyList` component, which passes it further to the `TechnologyCard` component. The child can call this function to send an action or data back to the parent.
-
