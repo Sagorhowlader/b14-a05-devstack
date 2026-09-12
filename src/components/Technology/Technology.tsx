@@ -68,7 +68,7 @@ const Technology = () => {
   };
 
   return (
-    <div className="container mx-auto p-4 sm:p-6 md:p-8">
+    <section className="container mx-auto p-4 sm:p-6 md:p-8">
       <div className="flex flex-col justify-between text-center items-center mb-10 gap-2 lg:items-start">
         <h1 className="text-2xl sm:text-4xl font-extrabold">
           Explore the
@@ -100,7 +100,7 @@ const Technology = () => {
           />
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

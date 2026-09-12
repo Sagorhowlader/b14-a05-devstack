@@ -2,7 +2,7 @@ import HeroImage from "../../assets/banner-stack.png";
 
 const HeroSection = () => {
   return (
-    <div className="container mx-auto flex flex-col items-center px-5 text-center lg:flex-row lg:justify-between lg:gap-10 lg:px-8 lg:text-start">
+    <section className="container mx-auto flex flex-col items-center px-5 text-center lg:flex-row lg:justify-between lg:gap-10 lg:px-8 lg:text-start">
       {/* Hero Content */}
       <div className="flex-1">
         <div className="pb-5">
@@ -38,7 +38,7 @@ const HeroSection = () => {
           className="max-w-full"
         />
       </div>
-    </div>
+    </section>
   );
 };
 
