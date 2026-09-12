@@ -2,59 +2,123 @@ import Logo from "../../assets/logo-text.png";
 
 const Footer = () => {
   return (
-    <div className="container mx-auto flex flex-col gap-14 px-4 py-8 md:px-8">
-      <div className="flex flex-col justify-between gap-10 md:flex-row">
-        <div className="flex flex-col gap-4">
-          <div>
-            <img src={Logo} alt="Dev Stack logo" />
+    <footer className="border-t border-gray-200">
+      <div className="container mx-auto flex flex-col gap-14 px-4 py-8 md:px-8">
+        {/* Top Section */}
+        <div className="flex w-full flex-col gap-10 md:flex-row md:justify-between">
+          {/* Brand */}
+          <div className="flex flex-col items-center gap-6 text-center md:items-start md:text-left">
+            <div className="flex flex-col items-center space-y-4 md:items-start">
+              <img src={Logo} alt="Dev Stack logo" />
+
+              <p className="max-w-115.5 text-gray-600">
+                Curated tools, technologies, and resources for developers
+                building modern software.
+              </p>
+            </div>
+
+            <div>
+              <ul className="flex gap-4 list-disc list-inside md:list-none">
+                <li>
+                  <a
+                    href="#"
+                    className="text-gray-600 transition hover:text-black"
+                  >
+                    GitHub
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="text-gray-600 transition hover:text-black"
+                  >
+                    Twitter
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="text-gray-600 transition hover:text-black"
+                  >
+                    LinkedIn
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
 
-          <div>
-            <p className="max-w-[462px] text-gray-600">
-              Curated tools, technologies, and resources for developers building
-              modern software.
-            </p>
-          </div>
+          {/* Navigation - Hidden on Mobile */}
+          <div className="hidden flex-1 justify-around gap-8 md:flex">
+            <ul className="space-y-3">
+              <li className="font-semibold text-gray-900">Product</li>
+              <li>
+                <a href="#" className="text-gray-600 hover:text-black">
+                  Home
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-gray-600 hover:text-black">
+                  Technologies
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-gray-600 hover:text-black">
+                  Projects
+                </a>
+              </li>
+            </ul>
 
-          <div className="flex justify-start gap-4">
-            <p>GitHub</p>
-            <p>Twitter</p>
-            <p>LinkedIn</p>
+            <ul className="space-y-3">
+              <li className="font-semibold text-gray-900">Company</li>
+              <li>
+                <a href="#" className="text-gray-600 hover:text-black">
+                  About
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-gray-600 hover:text-black">
+                  Contact
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-gray-600 hover:text-black">
+                  Careers
+                </a>
+              </li>
+            </ul>
+
+            <ul className="space-y-3">
+              <li className="font-semibold text-gray-900">Legal</li>
+              <li>
+                <a href="#" className="text-gray-600 hover:text-black">
+                  Privacy Policy
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-gray-600 hover:text-black">
+                  Terms of Service
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
 
-        <div className="flex flex-1 gap-8">
-          <ul className="flex-1 flex flex-col gap-3">
-            <li>Product</li>
-            <li>Home</li>
-            <li>Technologies</li>
-            <li>Project</li>
-          </ul>
+        {/* Bottom Section */}
+        <div className="flex w-full justify-between gap-3 border-t border-gray-200 pt-8 pr-8 text-center text-sm text-gray-500 md:flex-row md:text-left">
+          <p>© 2026 Dev Stack. All rights reserved.</p>
 
-          <ul className="flex-1 flex flex-col gap-3">
-            <li>Company</li>
-            <li>About</li>
-            <li>Contact</li>
-            <li>Career</li>
-          </ul>
+          <div className="flex flex-row justify-center gap-4 md:justify-start ">
+            <a href="#" className="hover:text-black">
+              Privacy
+            </a>
 
-          <ul className="flex-1 flex flex-col gap-3">
-            <li>Legal</li>
-            <li>Privacy Policy</li>
-            <li>Terms of Service</li>
-          </ul>
+            <a href="#" className="hover:text-black">
+              Terms
+            </a>
+          </div>
         </div>
       </div>
-
-      <div className="flex flex-col justify-between gap-3 border border-gray-200 p-6 text-sm text-gray-500 md:flex-row">
-        <p>© 2026 Dev Stack. All rights reserved.</p>
-
-        <div className="flex gap-3">
-          <p>Privacy</p>
-          <p>Terms</p>
-        </div>
-      </div>
-    </div>
+    </footer>
   );
 };
 
