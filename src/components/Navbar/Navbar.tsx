@@ -20,7 +20,7 @@ const Navbar = () => {
 
         {/* Desktop navigation */}
         <div>
-          <ul className="hidden items-center justify-center gap-4 text-sm font-semibold md:flex lg:flex lg:gap-8">
+          <ul className="hidden items-center justify-center gap-4 text-sm font-semibold md:flex lg:flex lg:gap-7">
             <li className="text-brand-gradient">Home</li>
             <li className="text-[#475569]">Technologies</li>
             <li className="text-[#475569]">Projects</li>

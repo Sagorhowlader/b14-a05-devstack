@@ -11,7 +11,7 @@ const HeroSection = () => {
             <span className="text-brand-gradient">Development Stack</span>
           </h1>
 
-          <p className="max-w-142.75 text-slate-500">
+          <p className="text-slate-500 text-xs lg:text-xl">
             Explore frontend, backend, database, and tooling options, compare
             them side by side, and put together the stack that fits your next
             project.
@@ -31,7 +31,7 @@ const HeroSection = () => {
       </div>
 
       {/* Hero Image */}
-      <div className="flex flex-1 justify-center">
+      <div className="flex flex-1 justify-end">
         <img
           src={HeroImage}
           alt="Development stack illustration"
